@@ -31,10 +31,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('categories.itemsList', {
-    url: '/itemsList/{categoryShortName}',
-    templateUrl: 'src/menuapp/templates/category-items.template.html',
-    controller: 'ItemsController as categoryItems',
+  .state('items', {
+    url: '/items/{categoryShortName}',
+    templateUrl: 'src/menuapp/templates/items.template.html',
+    controller: 'ItemsController as category',
     resolve: {
       itemsForCategory: ['$stateParams', 'MenuDataService',
         function ($stateParams, MenuDataService) {
